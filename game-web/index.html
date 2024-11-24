@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Interativo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-dark">
+    <div class="container">
+        <!-- Cabeçalho do Jogo -->
+        <header class="row">
+            <div class="col pt-4 mt-2 bg-info rounded text-center">
+                <h1 class="mb-4 text-white display-4">Jogo Interativo - Lucas Landgraf</h1>
+            </div>
+        </header>
+
+        <!-- Formulários -->
+        <!-- Formulário "Por onde você está acessando o site?" -->
+<section class="row m-5">
+    <div class="col">
+        <div class="bg-info rounded p-3">
+            <h4 class="text-center"><b>Por onde você está acessando o site?</b></h4>
+            <form id="formAcesso">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="acessoCelular" name="acesso">
+                    <label class="form-check-label" for="acessoCelular">Celular</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="acessoComputador" name="acesso">
+                    <label class="form-check-label" for="acessoComputador">Computador</label>
+                </div>
+                <div class="text-center">
+                    <button type="button" class="btn btn-primary mt-3" id="btnEnviarAcesso">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Formulário "O jogo está legal?" -->
+    <div class="col">
+        <div class="bg-info rounded p-3">
+            <h4 class="text-center"><b>O jogo está legal?</b></h4>
+            <form id="formFeedback">
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="feedbackSim" name="feedback" value="sim">
+                    <label class="form-check-label" for="feedbackSim">Sim</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="feedbackNao" name="feedback" value="nao">
+                    <label class="form-check-label" for="feedbackNao">Não</label>
+                </div>
+                <div class="text-center">
+                    <button type="button" class="btn btn-primary mt-3" id="btnEnviarFeedback">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+            <section class="row">
+                <div class="col">
+                    <div id="menu" class="bg-info text-center rounded p-3">
+                        <h2 class="text-white mb-4">Nesse jogo você terá que acertar o máximo de maçãs em 10 tentativas</h2>
+                        <button id="startGame" class="btn btn-primary">Iniciar Jogo</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Área do Jogo -->
+            <section id="gameArea" style="display: none;" class="text-center mt-4">
+                <div class="bg-dark p mb">
+                    <h5 class="text-white">
+                        <span id="flechas">Flechas restantes: 10</span> |
+                        <span id="pontuacao">Pontuação: 0</span>
+                    </h5>
+                </div>
+                <div id="maca" class="maca"></div>
+                <div id="flecha" class="flecha"></div>
+                <button id="restartGame" style="display: none;" class="btn btn-success mt-3">Jogar Novamente</button>
+            </section>
+        </main>
+
+        <!-- Rodapé -->
+        <footer class="row mt-5">
+            <div class="col text-center bg-info py-3 rounded">
+                <p class="text-white">© 2024 Lucas Landgraf | Todos os direitos reservados</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

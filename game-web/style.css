@@ -1,0 +1,33 @@
+#gameArea {
+    background-image: url('cenario.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: visible;
+    border-radius: 10px;
+}
+
+.maca {
+    background-image: url('maca.png');
+    background-size: contain;
+    position: absolute;
+    width: 90px;
+    height: 80px;
+    right: 10px; /* Coloca a maçã no canto direito */
+    top: 50%; /* Inicia a maçã no meio */
+    cursor: pointer;
+}
+
+.flecha {
+    width: 80px;  /*tamanho flecha*/
+    height: 40px;
+    background-image: url('flecha.png');
+    background-size: cover;
+    position: absolute;
+    top: 50%;  /* Posiciona verticalmente no meio */
+    left: 0;   /* Posiciona no canto esquerdo */
+    transform: translateY(-50%); /* centralizar no meio */
+    z-index: 10; /*flecha sobre outros elementos */
+}
